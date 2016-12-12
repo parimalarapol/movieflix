@@ -1,0 +1,236 @@
+/* Chrome, Safari, Opera */
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(1,1);
+    }
+    to {
+        -webkit-transform: scale(1.1,1.1);
+    }
+}
+
+/* Standard syntax */
+@keyframes zoom {
+   from {
+        transform: scale(1,1);
+   }
+   to {
+        transform: scale(1.1,1.1);
+   }
+}
+
+
+html {
+    position: relative;
+    
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.carousel-fade .carousel-inner .item {
+    opacity: 0;
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+    z-index: 2;
+}
+
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.item:nth-child(1) {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://images.alphacoders.com/180/180561.jpg) no-repeat center center fixed;
+     background-repeat: none;
+    -webkit-animation: zoom 20s; /* Chrome, Safari, Opera */
+    animation: zoom 20s;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.item:nth-child(2) {
+    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,.5)), url(http://www.hdwallpapers.in/walls/leonardo_dicaprio_the_revenant-HD.jpg) no-repeat center center fixed;
+    background-repeat: none;
+    -webkit-animation: zoom 20s; /* Chrome, Safari, Opera */
+    animation: zoom 20s;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.item:nth-child(3) {
+    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,.5)), url(http://latimesblogs.latimes.com/.a/6a00d8341c630a53ef013480477dec970c-pi) no-repeat center center fixed;
+    background-repeat: none;
+    -webkit-animation: zoom 20s; /* Chrome, Safari, Opera */
+    animation: zoom 20s;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.item:nth-child(4) {
+    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,.5)), url(http://www.firsthdwallpapers.com/uploads/2013/07/wallpapers-the-avengers-robert-downey-jr-wallpapers-movies.jpg) no-repeat center center fixed;
+    background-repeat: none;
+    -webkit-animation: zoom 20s; /* Chrome, Safari, Opera */
+    animation: zoom 20s;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.item:nth-child(5) {
+    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,.5)), url(https://images4.alphacoders.com/653/653613.jpg) no-repeat center center fixed;
+    background-repeat: none;
+    -webkit-animation: zoom 20s; /* Chrome, Safari, Opera */
+    animation: zoom 20s;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel {
+    z-index: -99;
+}
+
+.carousel .item {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+/* BUTTONS */
+.close{
+    color: #fff;
+}
+.close: hover{
+    color: #F7DC6F;
+}
+.btn{
+    border-radius: 0;
+    font: normal 0.8em 'Muli', sans-serif;
+    letter-spacing: 0.2vw;
+    color: #F7DC6F;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid #F7DC6F;
+    text-transform: uppercase;
+    padding: 2vh 2vw;
+}
+.btn-md{    
+    margin:25vh 1.5vw 0 0;    
+}
+.btn-sm{
+    margin: 2vh 0;
+    position: relative;
+}
+.btn:link, .btn:visited, .btn:hover, .btn:visited{
+    letter-spacing: 0.3vw;
+    color: #F7DC6F; 
+    padding: 2vh 1.6vw;
+}
+.modal-content{
+    border-radius: 0;
+    border:1px;
+    
+    background: rgba(0,0,0,0.5);
+    z-index: 1;    
+    border: 1px solid #fff;
+}
+.modal-backdrop {
+  z-index: -1;
+}
+.modal{
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+h2{
+   font: bold 1.5em 'Muli', sans-serif;
+    text-transform: uppercase;
+    color: #F7DC6F; 
+    text-align: center;
+    letter-spacing: 0.5vw;
+    margin-top: 15vh;
+    margin-bottom: 3vh !important; 
+}
+h4{
+    font: bold 1em 'Muli', sans-serif;
+    text-transform: uppercase;
+    color: #F7DC6F; 
+    text-align: center;
+    letter-spacing: 0.5vw;
+    margin-bottom: 3vh !important;
+}
+input[type=email], input[type=password] {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 5vh;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    letter-spacing: 2px;
+}
+
+input[type=email]:focus, input[type=password] {
+    border: 2px solid #555;
+}
+
+input[type=email].reply-modal, input[type=password].reply-modal {
+    width: 100%;
+    padding: 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    letter-spacing: 2px;
+}
